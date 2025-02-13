@@ -20,11 +20,11 @@
             position: relative;
         }
 
-        /* Corazón principal */
+        /* Corazón principal - Ajustado para pantallas más grandes */
         .corazon {
             position: relative;
-            width: 100px; /* Tamaño base del corazón */
-            height: 100px;
+            width: 150px; /* Tamaño base grande */
+            height: 150px;
             background-color: red;
             transform: rotate(-45deg);
             animation: latido 1s infinite;
@@ -34,23 +34,23 @@
         .corazon::after {
             content: "";
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             background-color: red;
             border-radius: 50%;
         }
 
         .corazon::before {
-            top: -50px;
+            top: -75px;
             left: 0;
         }
 
         .corazon::after {
-            left: 50px;
+            left: 75px;
             top: 0;
         }
 
-        /* Animación de latido: la escala no debe ser excesiva para evitar distorsión */
+        /* Animación de latido */
         @keyframes latido {
             0%, 100% {
                 transform: scale(1) rotate(-45deg);
@@ -107,10 +107,10 @@
             background-color: #e6004c;
         }
 
-        /* Ajustes para pantallas más pequeñas */
+        /* Ajustes para pantallas más pequeñas (como celulares) */
         @media (max-width: 768px) {
             body {
-                font-size: 22px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+                font-size: 22px; /* Ajusta el tamaño del texto para pantallas pequeñas */
             }
 
             .mensaje {
@@ -118,9 +118,16 @@
                 margin-top: 20px; /* Reduce el espacio superior */
             }
 
+            /* Corazón más pequeño para móviles */
             .corazon {
-                width: 80px; /* Ajusta el tamaño del corazón */
-                height: 80px;
+                width: 120px; /* Tamaño mediano para celulares */
+                height: 120px;
+            }
+
+            .corazon::before,
+            .corazon::after {
+                width: 120px;
+                height: 120px;
             }
 
             /* Ajusta el tamaño de los corazones flotantes */
@@ -130,6 +137,20 @@
 
             #audio-btn {
                 font-size: 18px; /* Ajusta el tamaño del botón */
+            }
+        }
+
+        /* Ajustes para pantallas muy grandes (como laptops grandes o escritorios) */
+        @media (min-width: 1024px) {
+            .corazon {
+                width: 180px; /* Tamaño aún mayor para pantallas grandes */
+                height: 180px;
+            }
+
+            .corazon::before,
+            .corazon::after {
+                width: 180px;
+                height: 180px;
             }
         }
 
