@@ -20,33 +20,34 @@
             position: relative;
         }
 
-        /* Corazón principal - Ajustado para pantallas más grandes */
+        /* Corazón principal */
         .corazon {
             position: relative;
-            width: 150px; /* Tamaño base grande */
-            height: 150px;
+            width: 120px; /* Tamaño base mediano */
+            height: 120px;
             background-color: red;
             transform: rotate(-45deg);
             animation: latido 1s infinite;
+            margin: 0 auto; /* Centrado automático */
         }
 
         .corazon::before,
         .corazon::after {
             content: "";
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             background-color: red;
             border-radius: 50%;
         }
 
         .corazon::before {
-            top: -75px;
+            top: -60px;
             left: 0;
         }
 
         .corazon::after {
-            left: 75px;
+            left: 60px;
             top: 0;
         }
 
@@ -120,14 +121,14 @@
 
             /* Corazón más pequeño para móviles */
             .corazon {
-                width: 120px; /* Tamaño mediano para celulares */
-                height: 120px;
+                width: 100px; /* Tamaño mediano-pequeño para celulares */
+                height: 100px;
             }
 
             .corazon::before,
             .corazon::after {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
             }
 
             /* Ajusta el tamaño de los corazones flotantes */
@@ -143,14 +144,14 @@
         /* Ajustes para pantallas muy grandes (como laptops grandes o escritorios) */
         @media (min-width: 1024px) {
             .corazon {
-                width: 180px; /* Tamaño aún mayor para pantallas grandes */
-                height: 180px;
+                width: 150px; /* Tamaño mediano-grande para pantallas grandes */
+                height: 150px;
             }
 
             .corazon::before,
             .corazon::after {
-                width: 180px;
-                height: 180px;
+                width: 150px;
+                height: 150px;
             }
         }
 
