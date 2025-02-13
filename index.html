@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -104,6 +105,7 @@
         #audio-btn:hover {
             background-color: #e6004c;
         }
+
         /* Ajustes para pantallas más pequeñas */
         @media (max-width: 768px) {
             body {
@@ -112,8 +114,47 @@
 
             .mensaje {
                 font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
-                margin-top: 20px; /* Reduce el espacio superior */
+                margin-top: 40px; /* Aumenta el margen superior para mover el mensaje más abajo */
+                max-width: 90%; /* Ajusta el máximo ancho del mensaje */
             }
+
+            .corazon {
+                width: 80px; /* Tamaño pequeño para celulares */
+                height: 80px;
+            }
+
+            .corazon::before,
+            .corazon::after {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Ajustes para pantallas en orientación vertical */
+        @media (orientation: portrait) {
+            .mensaje {
+                margin-top: 70px; /* Aumenta el espacio superior para pantallas verticales */
+                font-size: 16px;  /* Ajusta el tamaño del texto en vertical */
+            }
+
+            .corazon {
+                width: 90px; /* Ajusta el tamaño del corazón en vertical */
+                height: 90px;
+            }
+        }
+
+        /* Ajustes para pantallas en orientación horizontal */
+        @media (orientation: landscape) {
+            .mensaje {
+                margin-top: 20px; /* Menos margen superior en horizontal */
+                font-size: 18px;  /* Ajusta el tamaño del texto en horizontal */
+            }
+
+            .corazon {
+                width: 100px; /* Tamaño normal en horizontal */
+                height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -147,10 +188,11 @@
                 let randomDelay = Math.random() * 5;
                 let randomDuration = 5 + Math.random() * 5;
 
-                corazon.style[lado] = ${Math.random() * 10 + 5}%; // 5% - 15% del borde
-                corazon.style.top = ${randomY}px;
-                corazon.style.animationDuration = ${randomDuration}s;
-                corazon.style.animationDelay = -${randomDelay}s;
+                // Ajustar las posiciones de los corazones flotantes
+                corazon.style[lado] = `${Math.random() * 20 + 5}%`; // 5% - 25% desde el borde
+                corazon.style.top = `${randomY}px`;
+                corazon.style.animationDuration = `${randomDuration}s`;
+                corazon.style.animationDelay = `-${randomDelay}s`;
 
                 document.body.appendChild(corazon);
             }
