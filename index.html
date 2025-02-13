@@ -105,7 +105,7 @@
         #audio-btn:hover {
             background-color: #e6004c;
         }
-        /* Ajustes para pantallas más pequeñas */
+         /* Ajustes para pantallas más pequeñas */
         @media (max-width: 768px) {
             body {
                 font-size: 22px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
@@ -113,8 +113,21 @@
 
             .mensaje {
                 font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
-                margin-top: 20px; /* Reduce el espacio superior */
+                margin-top: 40px; /* Aumenta el margen superior para mover el mensaje más abajo */
             }
+
+            /* Corazón más pequeño para móviles */
+            .corazon {
+                width: 80px; /* Tamaño pequeño para celulares */
+                height: 80px;
+            }
+
+            .corazon::before,
+            .corazon::after {
+                width: 80px;
+                height: 80px;
+            }
+        }
     </style>
 </head>
 <body>
