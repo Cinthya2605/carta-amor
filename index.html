@@ -23,7 +23,7 @@
         /* Corazón principal */
         .corazon {
             position: relative;
-            width: 100px; /* Tamaño para pantallas grandes */
+            width: 100px;
             height: 100px;
             background-color: red;
             transform: rotate(-45deg);
@@ -50,7 +50,6 @@
             top: 0;
         }
 
-        /* Animación de latido */
         @keyframes latido {
             0%, 100% {
                 transform: scale(1) rotate(-45deg);
@@ -60,52 +59,11 @@
             }
         }
 
-        /* Ajustes para pantallas más pequeñas (como celulares) */
-        @media (max-width: 768px) {
-            body {
-                font-size: 22px; /* Ajusta el tamaño del texto para pantallas pequeñas */
-            }
-
-            .mensaje {
-                font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
-                margin-top: 20px; /* Reduce el espacio superior */
-            }
-
-            /* Corazón más pequeño para móviles */
-            .corazon {
-                width: 80px; /* Tamaño pequeño para celulares */
-                height: 80px;
-            }
-
-            .corazon::before,
-            .corazon::after {
-                width: 80px;
-                height: 80px;
-            }
-
-            .mensaje {
-                font-size: 18px; /* Ajusta el tamaño del texto */
-                margin-top: 20px; /* Reduce el espacio superior */
-            }
-        }
-
-        /* Ajustes para pantallas grandes (como laptops o escritorios) */
-        @media (min-width: 1024px) {
-            /* Mantén el tamaño del corazón que mencionas */
-            .corazon {
-                width: 100px; /* Tamaño adecuado para laptops */
-                height: 100px;
-            }
-
-            .corazon::before,
-            .corazon::after {
-                width: 100px;
-                height: 100px;
-            }
-
-            .mensaje {
-                font-size: 24px; /* Tamaño más grande de texto en pantallas grandes */
-            }
+        /* Mensaje con más espacio */
+        .mensaje {
+            margin-top: 50px;
+            max-width: 80%;
+            line-height: 1.5;
         }
 
         /* Corazones flotantes en los lados */
@@ -146,6 +104,32 @@
 
         #audio-btn:hover {
             background-color: #e6004c;
+        }
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            body {
+                font-size: 22px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+            }
+
+            .mensaje {
+                font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
+                margin-top: 20px; /* Reduce el espacio superior */
+            }
+
+            .corazon {
+                width: 80px; /* Reduce el tamaño del corazón */
+                height: 80px;
+            }
+
+            /* Ajusta el tamaño de los corazones flotantes */
+            .corazon-flotante {
+                font-size: 18px;
+            }
+
+            #audio-btn {
+                font-size: 18px; /* Ajusta el tamaño del botón */
+            }
         }
 
     </style>
