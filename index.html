@@ -23,7 +23,7 @@
         /* Corazón principal */
         .corazon {
             position: relative;
-            width: 100px;
+            width: 100px; /* Tamaño base del corazón */
             height: 100px;
             background-color: red;
             transform: rotate(-45deg);
@@ -50,12 +50,13 @@
             top: 0;
         }
 
+        /* Animación de latido: la escala no debe ser excesiva para evitar distorsión */
         @keyframes latido {
             0%, 100% {
                 transform: scale(1) rotate(-45deg);
             }
             50% {
-                transform: scale(1.1) rotate(-45deg); /* Menos escala en dispositivos pequeños */
+                transform: scale(1.1) rotate(-45deg);
             }
         }
 
@@ -118,7 +119,7 @@
             }
 
             .corazon {
-                width: 80px; /* Reduce el tamaño del corazón */
+                width: 80px; /* Ajusta el tamaño del corazón */
                 height: 80px;
             }
 
@@ -140,7 +141,8 @@
     <div class="mensaje">
         Amorcito, a tu lado todo es posible. <br>
         Te amo con todo mi corazón. <br>
-        ❤️ ¡Feliz día de San Valentín! ❤️
+        ❤️¡Feliz día de San Valentín!❤️ <br>
+        ❤️
     </div>
 
     <button id="audio-btn">❤️ INICIAR AUDIO ❤️</button>
