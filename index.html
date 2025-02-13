@@ -58,9 +58,10 @@
                 transform: scale(1.2) rotate(-45deg);
             }
         }
+
         /* Mensaje con más espacio */
         .mensaje {
-            margin-top: 60px;
+            margin-top: 50px;
             max-width: 80%;
             line-height: 1.5;
         }
@@ -87,7 +88,6 @@
                 opacity: 0;
             }
         }
-
         /* Botón para iniciar audio */
         #audio-btn {
             margin-top: 20px;
@@ -104,57 +104,6 @@
         #audio-btn:hover {
             background-color: #e6004c;
         }
-
-        /* Ajustes para pantallas más pequeñas */
-        @media (max-width: 768px) {
-            body {
-                font-size: 22px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-            }
-
-            .mensaje {
-                font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
-                margin-top: 40px; /* Aumenta el margen superior para mover el mensaje más abajo */
-                max-width: 90%; /* Ajusta el máximo ancho del mensaje */
-            }
-
-            .corazon {
-                width: 90px; /* Tamaño pequeño para celulares */
-                height: 90px;
-            }
-
-            .corazon::before,
-            .corazon::after {
-                width: 70px;
-                height: 70px;
-            }
-        }
-
-        /* Ajustes para pantallas en orientación vertical */
-        @media (orientation: portrait) {
-            .mensaje {
-                margin-top: 70px; /* Aumenta el espacio superior para pantallas verticales */
-                font-size: 16px;  /* Ajusta el tamaño del texto en vertical */
-            }
-
-            .corazon {
-                width: 90px; /* Ajusta el tamaño del corazón en vertical */
-                height: 90px;
-            }
-        }
-
-        /* Ajustes para pantallas en orientación horizontal */
-        @media (orientation: landscape) {
-            .mensaje {
-                margin-top: 20px; /* Menos margen superior en horizontal */
-                font-size: 18px;  /* Ajusta el tamaño del texto en horizontal */
-            }
-
-            .corazon {
-                width: 100px; /* Tamaño normal en horizontal */
-                height: 100px;
-            }
-        }
-    </style>
 </head>
 <body>
 
