@@ -88,6 +88,7 @@
                 opacity: 0;
             }
         }
+
         /* Botón para iniciar audio */
         #audio-btn {
             margin-top: 20px;
@@ -104,6 +105,34 @@
         #audio-btn:hover {
             background-color: #e6004c;
         }
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            body {
+                font-size: 22px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+            }
+
+            .mensaje {
+                font-size: 18px; /* Ajusta el tamaño del texto en el mensaje */
+                margin-top: 20px; /* Reduce el espacio superior */
+            }
+
+            .corazon {
+                width: 80px; /* Reduce el tamaño del corazón */
+                height: 80px;
+            }
+
+            /* Ajusta el tamaño de los corazones flotantes */
+            .corazon-flotante {
+                font-size: 18px;
+            }
+
+            #audio-btn {
+                font-size: 18px; /* Ajusta el tamaño del botón */
+            }
+        }
+
+    </style>
 </head>
 <body>
 
@@ -111,7 +140,7 @@
     <div class="mensaje">
         Amorcito, a tu lado todo es posible. <br>
         Te amo con todo mi corazón. <br>
-        ❤️ ¡Feliz día de San Valentín! ❤️
+        ❤️¡Feliz día de San Valentín!❤️
     </div>
 
     <button id="audio-btn">❤️ INICIAR AUDIO ❤️</button>
@@ -150,6 +179,7 @@
             var audio = document.getElementById("audio");
             audio.play(); // Reproducir el audio
         });
+
         crearCorazones();
     </script>
 
